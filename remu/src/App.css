@@ -1,4 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 body {
-  background-color: black;
-  color: azure;
+  /* background-color: #db903a;*/
+  background-image: url("./assets/bg-mandala-beige.png");
+}
+#body {
+  color: #333333;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+/* ===== Animation Keyframes ===== */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#name {
+  font-family: "Barriecito", cursive;
+  font-size: 4rem;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  opacity: 0;
+  animation: fadeSlideDown 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+#tagline {
+  margin-top: 0;
+  font-family: "Freeman", sans-serif;
+  font-size: 15px;
+
+  opacity: 0;
+  animation: fadeSlideDown 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+#notes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-self: center;
+  align-items: center;
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#t {
+  height: 155px;
+  width: 420px;
+  background: #d9d9d9;
+  border-radius: 30px;
+  padding: 15px;
+
+  opacity: 0;
+  animation: fadeSlideUp 0.9s ease-out forwards;
+  animation-delay: 0.22s;
+  will-change: transform, opacity;
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+#t:focus {
+  background-color: #f4f4f4;
+}
+#su {
+  margin-top: 25px;
+  height: 30px;
+  width: 90px;
+  border-radius: 10px;
+  background: #f4f4f4;
+
+  transition: transform 140ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 140ms,
+    background-color 160ms;
+
+  /* Entrance animation */
+  opacity: 0;
+  animation: fadeSlideUp 0.45s ease-out forwards;
+  animation-delay: 0.3s; /* small delay after textarea */
+}
+#su:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  background: #e3b55a;
+}
+#su:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ddd;
+}
+#show-seq {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin-top: 40px;
+
+  opacity: 0;
+  animation: fadeSlideUp 0.45s ease-out forwards;
+  animation-delay: 0.45s; /* appears after submit button */
+}
+#noteis {
+  width: 430px;
+  height: 60px;
+  background: #f4f4f4;
+  margin-bottom: 25px;
+  border: 3px thick #424242;
+  border-radius: 15px;
+
+  opacity: 0;
+  animation: fadeSlideUp 0.45s ease-out forwards;
+  animation-delay: 0.55s;
+}
+#note {
+  color: black;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#view-score:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  background-color: #e3b55a;
+}
+
+#view-score:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ddd;
+}
+
+#view-score {
+  height: 30px;
+  width: 90px;
+  border-radius: 10px;
+  background: #f4f4f4;
+
+  opacity: 0;
+  animation: fadeSlideUp 0.45s ease-out forwards;
+  animation-delay: 0.65s;
+}
+.score-low {
+  background-color: #f5b5b5; /* soft red */
+  color: #6b0000;
+  #scoore {
+    margin-left: 163px;
+  }
+  #message {
+    margin-left: 160px;
+  }
+}
+
+.score-mid {
+  background-color: #ffe8a3; /* warm yellow */
+  color: #5a4200;
+  #scoore {
+    margin-left: 163px;
+  }
+  #message {
+    margin-left: 171px;
+  }
+}
+
+.score-high {
+  background-color: #b6f5b5; /* light green */
+  color: #064b06;
+  #scoore {
+    margin-left: 155px;
+  }
+  #message {
+    margin-left: 155px;
+  }
+}
+#show-score {
+  margin-top: 130px;
+  height: 300px;
+  width: 420px;
+  margin-bottom: 40px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 100px;
+}
+#scoore {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 3rem;
+}
+#message {
+  font-size: 1rem;
 }
