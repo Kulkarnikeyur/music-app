@@ -116,19 +116,18 @@ body {
   animation: fadeSlideUp 0.45s ease-out forwards;
   animation-delay: 0.45s; /* appears after submit button */
 }
-#noteis {
-  width: 430px;
-  height: 60px;
+
+#note {
+  width: 420px;
   background: #f4f4f4;
   margin-bottom: 25px;
-  border: 3px thick #424242;
+  border: 1px thick #424242;
   border-radius: 15px;
+  padding: 10px;
 
   opacity: 0;
   animation: fadeSlideUp 0.45s ease-out forwards;
   animation-delay: 0.55s;
-}
-#note {
   color: black;
   margin-top: 10px;
   margin-left: 10px;
@@ -205,4 +204,112 @@ body {
 }
 #message {
   font-size: 1rem;
+}
+@media (min-width: 375px) and (max-width: 497px) {
+  #t {
+    height: 120px;
+    width: 320px;
+  }
+  #note {
+    width: 320px;
+  }
+  .score-low {
+    background-color: #f5b5b5; /* soft red */
+    color: #6b0000;
+    #scoore {
+      margin-left: 115px;
+    }
+    #message {
+      margin-left: 112px;
+    }
+  }
+
+  .score-mid {
+    background-color: #ffe8a3; /* warm yellow */
+    color: #5a4200;
+    #scoore {
+      margin-left: 115px;
+    }
+    #message {
+      margin-left: 123px;
+    }
+  }
+
+  .score-high {
+    background-color: #b6f5b5; /* light green */
+    color: #064b06;
+    #scoore {
+      margin-left: 100px;
+    }
+    #message {
+      margin-left: 100px;
+    }
+  }
+  #show-score {
+    height: 250px;
+    width: 320px;
+  }
+}
+@media (max-width: 375px) {
+  #name {
+    font-size: 2.5rem;
+  }
+  #tagname {
+    font-size: 10px;
+  }
+  #t {
+    height: 60px;
+    width: 140px;
+  }
+  #note {
+    height: 40px;
+    width: 140px;
+  }
+  .score-low {
+    background-color: #f5b5b5; /* soft red */
+    color: #6b0000;
+    #scoore {
+      margin-left: 70px;
+    }
+    #message {
+      margin-left: 68px;
+    }
+  }
+
+  .score-mid {
+    background-color: #ffe8a3; /* warm yellow */
+    color: #5a4200;
+    #scoore {
+      margin-left: 70px;
+    }
+    #message {
+      margin-left: 79px;
+    }
+  }
+
+  .score-high {
+    background-color: #b6f5b5; /* light green */
+    color: #064b06;
+    #scoore {
+      margin-left: 35px;
+    }
+    #message {
+      margin-left: 33px;
+    }
+  }
+  #show-score {
+    height: 150px;
+    width: 140px;
+  }
+  #scoore {
+    font-size: 2rem;
+  }
+  #message {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 257px) {
+  #tagname {
+    font-size: 6px;
+  }
 }
